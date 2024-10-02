@@ -6,7 +6,7 @@ function App() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const response = await fetch("/disruptions", {
+    const response = await fetch("http://127.0.0.1:5000/disruptions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
