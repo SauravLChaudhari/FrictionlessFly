@@ -1,0 +1,17 @@
+[
+    {
+      "customer_id": "123",
+      "preferences": {
+        "seat": "window",
+        "meal": "vegetarian"
+      }
+    },
+    {
+      "customer_id": "456",
+      "preferences": {
+        "seat": "aisle",
+        "meal": "non-vegetarian"
+      }
+    }
+  ]
+  
