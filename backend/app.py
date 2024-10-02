@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
+import random
 
 app = Flask(__name__)
 CORS(app)
@@ -17,7 +18,11 @@ def handle_disruption():
     flight_status = request.json.get("status")
     if flight_status == "cancelled":
         return jsonify({"message": "Flight cancelled, rebooking options provided"}), 200
-    return jsonify({"message": "Flight on schedule"}), 200
+    # Randomly decide success or failure
+    if random.choice([True, False]):
+        return jsonify({"message": "Flight on schedule, success"}), 200
+    else:
+        return jsonify({"message": "Flight cancelled, rebooking options provided"}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
