@@ -36,3 +36,100 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #87cefa, #f0f4f8);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 28px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+h1:before {
+  content: "\✈"; /* Unicode airplane icon */
+  font-size: 40px;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #3498db;
+}
+
+form {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px;
+  animation: slide-in 0.5s ease-in-out;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  color: #34495e;
+  margin-bottom: 8px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 30px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05); /* Slightly enlarges the button */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a shadow on hover */
+}
+
+p {
+  text-align: center;
+  color: #27ae60;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slide-in {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
